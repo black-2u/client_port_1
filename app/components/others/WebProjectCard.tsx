@@ -46,9 +46,10 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
         whileTap={{ scale: 0.9 }}
         style={{ boxShadow: shadow }}
       >
+        {/* project thumbnail */}
         <div className="-translate-x-6 -translate-y-6 xl:-translate-x-7 xl:-translate-y-6 absolute top-0 z-20">
           <Image
-            src={data.image}
+            src={data.thumbnail}
             width={650}
             height={400}
             alt={`${data.title}-cover pic`}
@@ -57,6 +58,8 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
             blurDataURL="/assets/image/imgPlaceholder.jpg"
           />
         </div>
+
+        {/* project summary */}
         <div
           className={clsx(webCardCss, "grow")}
           style={{ "--stroke-color": themeColor } as CSSProperties}
@@ -64,7 +67,7 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
           {/* take equal size for top space */}
           <div className="opacity-0">
             <Image
-              src={data.image}
+              src={data.thumbnail}
               width={650}
               height={380}
               alt={`${data.title}-cover pic`}
@@ -77,7 +80,7 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
               //   className={`flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 ${
               //     data.role == "project" ? "-right-[2.15rem]" : "-right-6"
               //   }`}
-              className="flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 -right-6"
+              className="flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 -right-8"
               style={ubuntu.style}
             >
               {/* {data.type == "project" ? "web project" : "web work"} */}

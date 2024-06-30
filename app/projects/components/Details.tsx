@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AiOutlineRollback } from "react-icons/ai";
-import { FaGithub, FaGripfire, FaLink, FaRegImages } from "react-icons/fa";
+import { FaGripfire, FaLink, FaRegImages } from "react-icons/fa";
 
 const outerVariants = {
   open: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } },
@@ -58,10 +58,10 @@ const Details = ({ Data }: { Data: ProjectType }) => {
         {/* hl5 ____________*/}
         <div className="w-fit mt-8 flex flex-col lg:flex-row items-center justify-center mx-auto lg:gap-10">
           <div className="w-[90%] lg:max-w-[18rem] flex flex-col ml-0 lg:ml-8 mb-8 lg:mb-0 lg:text-xl text-lg justify-center lg:justify-start">
-            {links.map((curr, i) => {
+            {links.map((item, idx) => {
               return (
                 <motion.div
-                  key={`links-${i}`}
+                  key={`links-${idx}`}
                   variants={linkVariants}
                   className="mt-4 py-2 px-3 md:px-4 rounded-full flex items-center border-2"
                   style={{
@@ -69,21 +69,22 @@ const Details = ({ Data }: { Data: ProjectType }) => {
                     boxShadow: `0px 0px 25px ${themeColor}`,
                   }}
                 >
-                  {curr.icon}
+                  {item.icon}
                   <Link
-                    href={curr.url}
+                    href={item.url}
                     target="_blank"
                     rel="noreferrer"
                     scroll={false}
                     className="ml-2"
                     style={poppins.style}
                   >
-                    {curr.text}
+                    {item.text}
                   </Link>
                 </motion.div>
               );
             })}
           </div>
+          {/* used tools */}
           <div className="text-lg md:text-xl mt-8 flex flex-col">
             <motion.div
               variants={languageVariants}
@@ -94,27 +95,26 @@ const Details = ({ Data }: { Data: ProjectType }) => {
                 style={{ color: themeColor }}
               />
               <span className="ml-2" style={ubuntu.style}>
-                Language, Frameworks / Libraries
+                Frameworks and Tools Used
               </span>
             </motion.div>
             <div className="mt-8 grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-10 w-fit mx-auto">
-              {Data["tools"].map((curr, index) => {
+              {Data["tools"].map((item, index) => {
                 return (
                   <motion.div
                     variants={languageVariants}
                     key={index}
-                    className="rounded-2xl px-6 py-4 w-24 flex items-center flex-col capitalize shadow-2xl dark:bg-slate-800/80 dark:shadow-black bg-slate-100 shadow-slate-400"
+                    className="rounded-2xl p-2 w-16 flex items-center flex-col capitalize shadow-2xl dark:bg-slate-800/80 dark:shadow-black bg-slate-100 shadow-slate-400"
                     style={poppins.style}
                   >
                     <Image
-                      src={`/svg/${Data.tools[index]}`}
-                      //   src={`/assets/language/${Data.toolsLogo[index]}`}
+                      src={Data.icons[index]}
                       height={50}
                       width={50}
                       alt="tools"
                       //   alt={Data.toolsLogo[index]}
                     />
-                    <span className="text-base">{curr}</span>
+                    {/* <span className="text-base">{item}</span> */}
                   </motion.div>
                 );
               })}
@@ -122,6 +122,8 @@ const Details = ({ Data }: { Data: ProjectType }) => {
           </div>
         </div>
       </div>
+
+      {/* snapshots */}
       <motion.div
         variants={Bottom}
         className="mx-auto flex flex-col mt-20 w-full"
@@ -133,7 +135,7 @@ const Details = ({ Data }: { Data: ProjectType }) => {
             <span className="ml-2 font-bold">Screenshots</span>
           </h4>
         </div>
-        <ImgSlider2 images={[Data.image]} fade={true} />
+        <ImgSlider2 images={Data.images} fade={true} />
         <div className="mt-16 mx-auto">
           <Button onClick={() => router.back()}>
             <div className="text-2xl flex items-center gap-4">

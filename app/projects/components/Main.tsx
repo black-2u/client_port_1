@@ -36,7 +36,7 @@ export const MainSection = ({ data }: { data: ProjectType[] }) => {
           <motion.div variants={Heading}>
             <AnimatedHeading
               classList="tracking-wide text-lg"
-              title="WEB PROJECTS"
+              title="MY PROJECTS"
             />
             <h1 className="text-4xl md:text-5xl mb-4">
               Learning<span className="font-bold ml-2">By Building</span>
@@ -45,8 +45,8 @@ export const MainSection = ({ data }: { data: ProjectType[] }) => {
           <div className="mt-12 p-4 md:p-8 xl:p-16 rounded-lg dark:text-gray-300 text-gray-800 dark:bg-slate-800/40 bg-slate-50">
             {data && (
               <div className="mt-16 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 relative">
-                {data.map((curr, index) => {
-                  return <WebProjectCard key={index} data={curr} />;
+                {data.map((item, index) => {
+                  return <WebProjectCard key={index} data={item} />;
                 })}
               </div>
             )}

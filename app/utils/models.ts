@@ -1,7 +1,7 @@
 import { Url } from "url";
 
 export type ProjectType = {
-  id: number;
+  id: string;
   title: string;
   overview: string;
   status: string;
@@ -10,7 +10,8 @@ export type ProjectType = {
   icons: string[];
   slug: string;
   url: string;
-  image: string;
+  thumbnail: string;
+  images: string[];
 };
 
 // export type webProjectModel = {
