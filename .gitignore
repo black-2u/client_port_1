@@ -37,3 +37,8 @@ next-env.d.ts
 
 # anima
 /.anima
+
+#unnecessary
+/app/blossoms
+/app/projects_temp
+/app/lib
