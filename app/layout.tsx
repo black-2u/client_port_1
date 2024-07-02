@@ -44,9 +44,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Gaurav Sharma | Home",
-    description:
-      "Hey! This is Black W, a passionate full stack web developer. Explore my comprehensive portfolio showcasing expertise in full stack web and Flutter mobile app development.  Let's bring your ideas to life with creativity and precision. ",
-    images: "https://avatars.githubusercontent.com/u/99950805?v=4",
+    description: "Gaurav Sharma: skilled UI/UX designer",
+    // images: "https://avatars.githubusercontent.com/u/99950805?v=4",
   },
 };
 
