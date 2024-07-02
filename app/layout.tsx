@@ -8,8 +8,7 @@ import Footer from "./components/others/Footer";
 
 export const metadata: Metadata = {
   title: "Gaurav Sharma | Home",
-  description:
-    "Hey! This is Black W, A passionate full stack web developer. Explore my comprehensive portfolio showcasing expertise in full stack web and Flutter mobile app development.  Let's bring your ideas to life with creativity and precision. ",
+  description: "Gaurav Sharma: A skilled UI/UX designer.",
   authors: [
     {
       name: "Black W",
@@ -17,31 +16,37 @@ export const metadata: Metadata = {
     },
   ],
   keywords: [
-    "Web Development",
-    "Flutter Projects",
+    "UI/ UX Design",
     "Responsive Design",
-    "Mobile App Development",
-    "Innovative Technology",
-    "User Experience (UX)",
-    "Front-end Development",
-    "Full-stack Development",
-    "Web Applications",
-    "Flutter Apps",
-    "UI/UX Design",
-    "Cross-Platform Development",
-    "Interactive Interfaces",
-    "Digital Innovation",
+    "Adobe XD",
+    "Adobe Indesign",
+    "Sketch",
+    "Figma",
+    "Invision",
+    "Illustrator",
+    "Photoshop",
+    "Premiere Pro",
+    "After Effects",
+    "Interview & Survey",
+    "Heuristic Evaluation",
+    "Competitor Analysis",
+    "Persona & User Stories",
+    "Strategic Storyboarding",
+    "Journey Mapping",
+    "Task Flow & User Flow",
+    "Pattern Library",
+    "Wireframing",
+    "Prototyping",
   ],
   creator: "Black W",
   publisher: "Vercel",
-  metadataBase: new URL("https://black-2u.vercel.app/"),
+  // metadataBase: new URL("https://black-2u.vercel.app/"),
   openGraph: {
     type: "website",
     title: "Gaurav Sharma | Home",
     description:
       "Hey! This is Black W, a passionate full stack web developer. Explore my comprehensive portfolio showcasing expertise in full stack web and Flutter mobile app development.  Let's bring your ideas to life with creativity and precision. ",
     images: "https://avatars.githubusercontent.com/u/99950805?v=4",
-    url: "https://moinak05.vercel.app/",
   },
 };
 
