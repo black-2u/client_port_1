@@ -6,7 +6,13 @@ import { TbArrowsDownUp } from "react-icons/tb";
 import { useRef } from "react";
 import { useAppTheme } from "../theme/AppTheme";
 import { HeroBg } from "./HeroBg";
-import { poppins, roboto, robotoMono, ubuntu } from "@/app/utils/Fonts";
+import {
+  dm_serif,
+  poppins,
+  roboto,
+  robotoMono,
+  ubuntu,
+} from "@/app/utils/Fonts";
 import { star } from "@/app/utils/placeholder";
 
 const viewport = {
@@ -90,14 +96,14 @@ export default function Hero() {
                 displayTextRenderer={(text: string, i: number) => {
                   return (
                     <h2>
-                      {text.split("").map((curr, i) => {
+                      {text.split("").map((item, i) => {
                         return (
                           <span
                             key={`greet_${i}`}
                             className="text-xl md:text-2xl dark:text-gray-200 text-gray-900"
                             style={poppins.style}
                           >
-                            {curr}
+                            {item}
                           </span>
                         );
                       })}
@@ -117,7 +123,7 @@ export default function Hero() {
                 className="noSelection xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-b bg-clip-text text-transparent dark:from-white dark:to-[#38495a] from-[#807a70] to-[#6d5b45]"
                 style={ubuntu.style}
               >
-                <span>I&apos;m {star}, a </span>
+                <span>Hi, I&apos;m {star}, a </span>
                 <br className="" />
                 <span className="font-extrabold">
                   User Experience Designer.
@@ -130,13 +136,13 @@ export default function Hero() {
             className="mt-6 text-base lg:text-lg text-[#7c6a56] dark:text-[#DCD3C4]  text-center px-0 md:px-8"
           >
             <p>
-              <span className="font-bold" style={robotoMono.style}>
+              <span className="font-bold pe-2" style={robotoMono.style}>
                 Welcome to my portfolio!
               </span>
               <span style={roboto.style}>
-                I&apos;m a skilled User Experience Designer living in Delhi NCR.
-                Currently working with an IT firm based in Pune as UX Designer.
-                I love what I do.
+                I&apos;m a skilled User Experience Designer who loves telling
+                engaging and immersive stories through human-centered design
+                solutions.
               </span>
             </p>
           </motion.article>

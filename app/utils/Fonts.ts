@@ -8,8 +8,15 @@ import {
   Roboto_Mono,
   Montserrat,
   Bad_Script,
+  DM_Serif_Text,
 } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
+
+const dm_serif: NextFont = DM_Serif_Text({
+  display: "swap",
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 const roboto: NextFont = Roboto({
   display: "swap",
@@ -58,6 +65,7 @@ const badScript: NextFont = Bad_Script({
 });
 
 export {
+  dm_serif,
   roboto,
   robotoMono,
   ubuntu,

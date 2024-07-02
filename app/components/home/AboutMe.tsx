@@ -43,10 +43,19 @@ const AboutMe = ({ themeColor }: props) => {
           </h1>
           <article style={monsterRat.style}>
             <p className="dark:text-gray-300 text-gray-700 font-medium">
-              Passionate UI/UX designer with over 5 years of hands-on industry
-              technology. Demonstrated track record of designing and delivering
-              solutions that precisely meet use needs. Eager to turn innovative
-              ideas into reality.
+              Hi! My name is Gaurav. I am an artist 🎨, an avid film watcher 🎞️,
+              a traveler✈️, a problem-solver✔️, and a human being who cares
+              deeply about bringing more empathy into the workplace and creating
+              a lasting, meaningful impact on people&apos;s experiences through
+              good design.
+            </p>
+            <p className="dark:text-gray-300 text-gray-700 font-medium pt-2">
+              I am a user experience designer, meaning I design innovative,
+              data-driven, and impactful solutions that work! Using the right
+              mix of UX tools, I help drive smart business decisions through
+              goal alignment and problem-framing before delivering powerful,
+              value-driven design solutions that facilitate a more enjoyable
+              digital experience for all users.
             </p>
           </article>
           <h2 className="mt-4 text-2xl font-bold" style={ubuntu.style}>

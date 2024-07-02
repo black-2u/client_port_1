@@ -28,6 +28,7 @@ const config: Config = {
       animation: {
         shift: "shift 5s linear infinite",
       },
+      safelist: ["animate-[fly-in-right_1.5s]", "animate-[fly-in-left_1.5s]"],
     },
     screens: {
       xs: "480px",

@@ -8,7 +8,13 @@ import { ModeSwitch1 } from "./ModeSwitch";
 import HamBurger from "./Hamburger";
 import ContactForm from "./ContactForm";
 
-import { pacifico, roboto, ubuntu, badScript } from "@/app/utils/Fonts";
+import {
+  pacifico,
+  roboto,
+  ubuntu,
+  badScript,
+  dm_serif,
+} from "@/app/utils/Fonts";
 import { star } from "@/app/utils/placeholder";
 
 // MenuItems
@@ -32,7 +38,7 @@ export default function Navbar() {
           <AnimatedHeading
             title="G."
             classList="hidden md:inline-block xl:text-4xl text-3xl"
-            font={badScript}
+            font={dm_serif}
           />
         </Link>
         {/* navItems */}
