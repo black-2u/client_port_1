@@ -5,7 +5,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Navigation, Pagination, EffectFade } from "swiper/modules";
-import Image from "next/legacy/image";
 
 interface props {
   images: string[];
@@ -44,7 +43,6 @@ export default function ImgSlider2({ images, fade }: props) {
                   style={{ pointerEvents: "none" }}
                 />
               </picture>
-              {/* .<Image src={curr} layout="fill"  className='min-w-full min-h-full mx-auto' alt={`${index}.jpg`} /> */}
             </SwiperSlide>
           );
         })}

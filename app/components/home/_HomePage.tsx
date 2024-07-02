@@ -5,17 +5,8 @@ import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import Tech from "./Tech";
 import Projects from "./Projects";
-import HireMe from "./HireMe";
-// import FlutterProjects from "./FlutterProjects";
-// import Hobby from "./Hobby";
-// import WebProjects from "./Projects";
 import { useAppTheme } from "../theme/AppTheme";
 import { useEffect } from "react";
-// import {
-//   HomeProps,
-//   flutterProjectModel,
-//   webProjectModel,
-// } from "@/app/utils/models";
 
 const viewport = {
   once: false,
@@ -73,26 +64,6 @@ const _HomePage = () => {
       >
         <Projects />
       </motion.section>
-      {/* <motion.section
-        id="FlutterProjects"
-        initial="closed"
-        whileInView="open"
-        viewport={viewport}
-        transition={transition}
-        className="relative overflow-hidden"
-      >
-        <FlutterProjects data={props.flutterProjects} />
-      </motion.section> */}
-      {/* <motion.section
-        id="HireMe"
-        initial="closed"
-        whileInView="open"
-        viewport={viewport}
-        transition={transition}
-        className=" relative overflow-hidden myContainer py-[8rem]"
-      >
-        <HireMe />
-      </motion.section> */}
     </>
   );
 };

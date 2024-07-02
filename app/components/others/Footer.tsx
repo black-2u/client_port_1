@@ -2,25 +2,17 @@
 
 import { Variants, motion } from "framer-motion";
 import Link from "next/link";
-import { AiFillFacebook, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 import FooterStyle from "@/app/css/Footer.module.css";
 import { useAppTheme } from "../theme/AppTheme";
 import { useTheme } from "next-themes";
-import {
-  monsterRat,
-  poppins,
-  roboto,
-  robotoMono,
-  ubuntu,
-} from "@/app/utils/Fonts";
+import { roboto, ubuntu } from "@/app/utils/Fonts";
 import { useMemo, useRef } from "react";
 import ContactForm from "./ContactForm";
 
 import DownloadCV from "./DownloadCV";
 import clsx from "clsx";
 
-import Image from "next/image";
 import { FaEnvelope, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export const socialLinks = [
@@ -42,12 +34,6 @@ export const socialLinks = [
     color: "#25D366",
     icon: <FaWhatsapp />,
   },
-  // {
-  //   url: "https://www.facebook.com/",
-  //   toolTip: "Facebook",
-  //   color: "#1877F2",
-  //   icon: <FaFacebookF />,
-  // },
 ];
 
 const viewport = {
@@ -133,12 +119,6 @@ export default function Footer() {
               <h2 style={ubuntu.style}>
                 Copyright {new Date().getFullYear()} - All rights reserved.
               </h2>
-              {/* <button
-                onClick={() => modalRef.current?.showModal()}
-                className={`${ubuntu.className} text-4xl font-bold outline-none cursor-pointer w-fit`}
-              >
-                Lets talk
-              </button> */}
             </div>
           </motion.div>
         </div>

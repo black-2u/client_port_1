@@ -2,7 +2,6 @@ import { Variants, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 import { MdOutlineWarning, MdOutlineHighlightOff } from "react-icons/md";
 import { Comic_Neue, Lato } from "next/font/google";
-// import SocialMedia from './SocialMedia'
 
 const comicNeue = Comic_Neue({
   display: "swap",
@@ -59,9 +58,6 @@ const PopupError = ({ errors, setErrors }: props) => {
           >
             Wait sometime or report to the developer.
           </motion.h2>
-          {/* <motion.div variants={innerVariants} className="mt-4">
-            <SocialMedia classList="flex justify-start gap-4 text-white" />
-          </motion.div> */}
         </motion.div>
         <MdOutlineHighlightOff
           className="absolute top-2 right-2 cursor-pointer text-4xl"

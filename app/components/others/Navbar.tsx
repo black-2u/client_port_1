@@ -8,22 +8,12 @@ import { ModeSwitch1 } from "./ModeSwitch";
 import HamBurger from "./Hamburger";
 import ContactForm from "./ContactForm";
 
-import {
-  pacifico,
-  roboto,
-  ubuntu,
-  badScript,
-  dm_serif,
-} from "@/app/utils/Fonts";
-import { star } from "@/app/utils/placeholder";
+import { roboto, ubuntu, dm_serif } from "@/app/utils/Fonts";
 
 // MenuItems
 const link = [
   { name: "Home", url: "/" },
-  // { name: "About me", url: "/about" },
-  // { name: "Skills", url: "/tech" },
   { name: "Projects", url: "/projects" },
-  // { name: "Contact", url: "/contact" },
 ];
 
 export default function Navbar() {

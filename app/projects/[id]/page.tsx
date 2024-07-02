@@ -1,38 +1,19 @@
 "use client";
 
-import DevFlag from "@/app/components/others/DevFlag";
 import AnimatedHeading from "@/app/components/others/AnimatedHeading";
 import { Ubuntu } from "next/font/google";
 import Details from "../components/Details";
 import Bg from "../components/Bg";
-import { Metadata, ResolvingMetadata } from "next";
 import { ProjectType } from "@/app/utils/models";
 import { projects } from "@/app/utils/placeholder";
-import { useCallback } from "react";
+
 import { useParams } from "next/navigation";
-// import { ServerData } from "@/app/utils/ServerData";
-// import { webProjectModel } from "@/app/utils/models";
 
 const ubuntu = Ubuntu({
   display: "swap",
   weight: ["400", "700"],
   subsets: ["latin"],
 });
-
-// async function fetchDetails(slug: string) {
-
-//     if(slug.includes('object') || slug.includes("Object")) return;
-
-//     const data = new ServerData({ path: 'getWeb' });
-
-//     const res = await data.get({ body: { slug } });
-
-//     if (!res.ok) {
-//         throw new Error(`Failed to fetch web project : ${slug}`)
-//     }
-
-//     return await res.json();
-// }
 
 export default function Page({ params }: { params: { id: string } }) {
   const path = useParams();

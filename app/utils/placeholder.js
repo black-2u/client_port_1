@@ -10,40 +10,6 @@ export const star = "Gaurav Sharma";
 
 export const nickname = "Gaurav Sharma";
 
-// export const socialLinks = [
-//   {
-//     url: "mailto:Gaurg046@gmail.com",
-//     toolTip: "Email",
-//     color: "#181717",
-//     icon: <FaEnvelope />,
-//   },
-//   {
-//     url: "https://www.linkedin.com/in/moinak-majumdar",
-//     toolTip: "Linkedin",
-//     color: "#0A66C2",
-//     icon: <FaLinkedinIn />,
-//   },
-//   {
-//     url: "https://api.whatsapp.com/send?phone=+919953234699",
-//     toolTip: "Whatsapp",
-//     color: "#25D366",
-//     icon: <FaWhatsapp />,
-//   },
-//   // {
-//   //   url: "https://www.facebook.com/",
-//   //   toolTip: "Facebook",
-//   //   color: "#1877F2",
-//   //   icon: <FaFacebookF />,
-//   // },
-// ];
-// {
-//   name: "Post Graduation",
-//   sub: "Machine Learning, Database Management system, Data Structures and Algorithms, Computer Networks, Software Engineering, Operating System",
-//   date: "oct 2022 - ",
-//   from: "itemently pursuing Masters In Computer Application (MCA) from Maulana Abul Kalam Azad University of Technology, West Bengal, India",
-//   grade: "8.87 (CGPA)",
-// },
-
 export const experience = [
   {
     id: 1,

@@ -10,7 +10,6 @@ import {
   FaUserCheck,
 } from "react-icons/fa";
 import { BsGearFill, BsCameraFill, BsCodeSlash } from "react-icons/bs";
-import { SiFlutter } from "react-icons/si";
 import { useState, useEffect, ReactNode } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { BiMessageDetail } from "react-icons/bi";
@@ -205,22 +204,14 @@ const navLinkHome: I_links[] = [
   { name: "About Me", link: "#AboutMe", icon: <BiMessageDetail /> },
   { name: "Skills", link: "#Tech", icon: <BsGearFill /> },
   { name: "Projects", link: "#WebProjects", icon: <BsCodeSlash /> },
-  // { name: 'Flutter Projects', link: '#FlutterProjects', icon: <SiFlutter /> },
-  // { name: 'My Hobby', link: '#MyHobby', icon: <BsCameraFill /> },
   { name: "Contact", link: "#Contact", icon: <FaFileSignature /> },
 ];
 const navLinkProjects: I_links[] = [
   { name: "Home", link: "/", icon: <FaHome /> },
   { name: "Projects", link: "#WebProjects", icon: <BsCodeSlash /> },
-  //   { name: "Flutter Projects", link: "#FlutterProjects", icon: <SiFlutter /> },
-  //   { name: "My Hobby", link: "/blossoms", icon: <BsCameraFill /> },
 ];
-// const navLinkBlossoms: I_links[] = [
-//   { name: "Home", link: "/", icon: <FaHome /> },
-//   { name: "Projects", link: "/projects", icon: <FaUserCheck /> },
-// ];
+
 const navLinkOthers: I_links[] = [
   { name: "Home", link: "/", icon: <FaHome /> },
   { name: "Projects", link: "/projects", icon: <FaUserCheck /> },
-  //   { name: "Blossoms", link: "/blossoms", icon: <BsCameraFill /> },
 ];

@@ -3,7 +3,7 @@ import { useFormStatus } from "react-dom";
 import { RefObject, useRef } from "react";
 import { LuSend } from "react-icons/lu";
 import { IoReload } from "react-icons/io5";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import contactAction from "@/app/actions/contact";
 

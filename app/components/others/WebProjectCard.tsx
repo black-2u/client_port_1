@@ -8,7 +8,6 @@ import Link from "next/link";
 import AnimatedHeading from "./AnimatedHeading";
 import cardStyle from "@/app/css/WebCard2.module.css";
 import { useAppTheme } from "../theme/AppTheme";
-// import { webProjectModel } from "@/app/utils/models";
 import { monsterRat, poppins, robotoMono, ubuntu } from "@/app/utils/Fonts";
 import { ProjectType } from "@/app/utils/models";
 import { clsx } from "clsx";
@@ -77,13 +76,9 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
           </div>
           <div className="z-10 grow flex flex-col justify-stretch">
             <p
-              //   className={`flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 ${
-              //     data.role == "project" ? "-right-[2.15rem]" : "-right-6"
-              //   }`}
               className="flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 -right-8"
               style={ubuntu.style}
             >
-              {/* {data.type == "project" ? "web project" : "web work"} */}
               {data.role}
             </p>
             <motion.div
