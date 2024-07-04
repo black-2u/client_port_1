@@ -9,12 +9,26 @@ import {
   Montserrat,
   Bad_Script,
   DM_Serif_Text,
+  PT_Serif_Caption,
+  Inter,
 } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
 
 const dm_serif: NextFont = DM_Serif_Text({
   display: "swap",
   weight: ["400"],
+  subsets: ["latin"],
+});
+
+const pt_serif_caption: NextFont = PT_Serif_Caption({
+  display: "swap",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const inter: NextFont = Inter({
+  display: "swap",
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
@@ -65,7 +79,9 @@ const badScript: NextFont = Bad_Script({
 });
 
 export {
+  inter,
   dm_serif,
+  pt_serif_caption,
   roboto,
   robotoMono,
   ubuntu,

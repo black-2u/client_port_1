@@ -30,16 +30,16 @@ export default function Projects() {
       >
         <motion.div variants={Heading}>
           <AnimatedHeading
-            classList="tracking-wide text-lg"
+            classList="tracking-wide text-base md:text-lg"
             title="MY PROJECTS"
           />
-          <h1 className="text-4xl md:text-5xl mb-4">
+          <h1 className="text-xl lg:text-3xl my-4">
             Learning<span className="font-bold ml-2">By Building</span>
           </h1>
         </motion.div>
         <div className="mt-4 p-4 md:p-8 xl:p-16 rounded-lg dark:bg-slate-900 bg-gray-100">
           {projects && (
-            <div className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 relative">
+            <div className="mx-auto grid md:grid-cols-2 grid-cols-1 gap-16 relative">
               {projects.map((item, index) => {
                 return (
                   <WebProjectCard key={`webProject_${index}`} data={item} />

@@ -41,7 +41,7 @@ export function HeroBg({ y }: { y: MotionValue<string> }) {
         style={{
           y: y,
           background:
-            "radial-gradient(ellipse at bottom, #f3f4f6 0%, #ffffff 100%)",
+            "radial-gradient(ellipse at bottom, #fafafa 0%, #ffffff 100%)",
         }}
       >
         <div

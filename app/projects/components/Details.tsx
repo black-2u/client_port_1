@@ -3,7 +3,7 @@
 import Button from "@/app/components/others/Button";
 import ImgSlider2 from "@/app/components/others/ImgSlider2";
 import { useAppTheme } from "@/app/components/theme/AppTheme";
-import { poppins, ubuntu } from "@/app/utils/Fonts";
+import { poppins, roboto, ubuntu } from "@/app/utils/Fonts";
 import { ProjectType } from "@/app/utils/models";
 import { Variants, motion } from "framer-motion";
 import Image from "next/image";
@@ -52,12 +52,12 @@ const Details = ({ Data }: { Data: ProjectType }) => {
         <motion.article
           variants={textVariants}
           style={poppins.style}
-          className="text-base lg:text-lg w-full py-4 mr-4"
+          className="text-base lg:text-lg w-full py-2 mr-4"
           dangerouslySetInnerHTML={{ __html: Data.overview }}
         ></motion.article>
         {/* hl5 ____________*/}
-        <div className="w-fit mt-8 flex flex-col lg:flex-row items-center justify-center mx-auto lg:gap-10">
-          <div className="w-[90%] lg:max-w-[18rem] flex flex-col ml-0 lg:ml-8 mb-8 lg:mb-0 lg:text-xl text-lg justify-center lg:justify-start">
+        <div className="w-fit mt-4 flex flex-col lg:flex-row items-center">
+          {/* <div className="w-[90%] lg:max-w-[18rem] flex flex-col ml-0 lg:ml-8 mb-8 lg:mb-0 lg:text-xl text-lg justify-center lg:justify-start">
             {links.map((item, idx) => {
               return (
                 <motion.div
@@ -83,22 +83,22 @@ const Details = ({ Data }: { Data: ProjectType }) => {
                 </motion.div>
               );
             })}
-          </div>
+          </div> */}
           {/* used tools */}
-          <div className="text-lg md:text-xl mt-8 flex flex-col">
+          <div className=" mt-4 flex flex-col">
             <motion.div
               variants={languageVariants}
-              className="text-2xl flex items-center"
+              className="flex items-center"
             >
               <FaGripfire
-                className="text-3xl md:text-4xl animate-pulse"
+                className="animate-pulse"
                 style={{ color: themeColor }}
               />
-              <span className="ml-2" style={ubuntu.style}>
+              <span className="ml-2 text-lg md:text-xl" style={roboto.style}>
                 Frameworks and Tools Used
               </span>
             </motion.div>
-            <div className="mt-8 grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-10 w-fit mx-auto">
+            <div className="mt-2 grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-8 w-fit mx-auto">
               {Data["tools"].map((item, index) => {
                 return (
                   <motion.div
@@ -109,8 +109,8 @@ const Details = ({ Data }: { Data: ProjectType }) => {
                   >
                     <Image
                       src={Data.icons[index]}
-                      height={50}
-                      width={50}
+                      height={40}
+                      width={40}
                       alt="tools"
                       //   alt={Data.toolsLogo[index]}
                     />
@@ -126,17 +126,17 @@ const Details = ({ Data }: { Data: ProjectType }) => {
       {/* snapshots */}
       <motion.div
         variants={Bottom}
-        className="mx-auto flex flex-col mt-20 w-full"
+        className="mx-auto flex flex-col mt-8 w-full"
       >
-        <div className="mx-auto mb-6 flex items-center text-2xl md:text-3xl">
-          <FaRegImages className="text-4xl" style={{ color: themeColor }} />
+        <div className="mx-auto mb-4 flex items-center text-lg md:text-2xl">
+          <FaRegImages className="text-2xl" style={{ color: themeColor }} />
           <h4 className="ml-2" style={ubuntu.style}>
             Some
             <span className="ml-2 font-bold">Screenshots</span>
           </h4>
         </div>
         <ImgSlider2 images={Data.images} fade={true} />
-        <div className="mt-16 mx-auto">
+        <div className="mt-8 mx-auto">
           <Button onClick={() => router.back()}>
             <div className="text-2xl flex items-center gap-4">
               <AiOutlineRollback />

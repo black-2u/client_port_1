@@ -8,7 +8,7 @@ import { ModeSwitch1 } from "./ModeSwitch";
 import HamBurger from "./Hamburger";
 import ContactForm from "./ContactForm";
 
-import { roboto, ubuntu, dm_serif } from "@/app/utils/Fonts";
+import { roboto, pt_serif_caption, dm_serif } from "@/app/utils/Fonts";
 
 // MenuItems
 const link = [
@@ -32,17 +32,17 @@ export default function Navbar() {
           />
         </Link>
         {/* navItems */}
-        <nav className="flex items-center lg:text-xl text-base gap-4 lg:gap-6 xl:gap-8  dark:text-gray-200 text-black">
+        <nav className="flex items-center lg:text-lg text-base gap-4 lg:gap-6 xl:gap-8  dark:text-gray-200 text-black">
           {link.map((item, index) => {
             return (
               <Link
                 scroll={false}
                 href={item.url}
                 key={index}
-                style={ubuntu.style}
+                style={roboto.style}
                 className={`hidden capitalize md:inline-block noSelection ${
                   pathName === item.url
-                    ? "font-ubuntu underline underline-offset-8 cursor-pointer"
+                    ? "font-roboto underline underline-offset-8 cursor-pointer"
                     : ""
                 }`}
               >

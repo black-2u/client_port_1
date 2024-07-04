@@ -7,11 +7,10 @@ import { useRef } from "react";
 import { useAppTheme } from "../theme/AppTheme";
 import { HeroBg } from "./HeroBg";
 import {
-  dm_serif,
+  pt_serif_caption,
   poppins,
   roboto,
   robotoMono,
-  ubuntu,
 } from "@/app/utils/Fonts";
 import { star } from "@/app/utils/placeholder";
 
@@ -70,7 +69,7 @@ export default function Hero() {
           <motion.div variants={Top}>
             <div className="flex">
               <h2
-                className="text-xl md:text-2xl mr-1 font-ubuntu"
+                className="text-base md:text-xl mr-1 font-mono"
                 style={{ color: themeColor }}
               >
                 &lt;
@@ -88,11 +87,11 @@ export default function Hero() {
                   "مرحبا بالعالم !",
                   "你好世界 !",
                 ]}
-                speed={200}
-                eraseSpeed={100}
-                typingDelay={100}
-                eraseDelay={1800}
-                cursorClassName="text-xl md:text-2xl ml-1 dark:text-gray-200 text-gray-900"
+                speed={100}
+                eraseSpeed={50}
+                typingDelay={150}
+                eraseDelay={1500}
+                cursorClassName="text-base md:text-xl ml-1 dark:text-gray-200 text-gray-900"
                 displayTextRenderer={(text: string, i: number) => {
                   return (
                     <h2>
@@ -100,8 +99,7 @@ export default function Hero() {
                         return (
                           <span
                             key={`greet_${i}`}
-                            className="text-xl md:text-2xl dark:text-gray-200 text-gray-900"
-                            style={poppins.style}
+                            className="font-mono text-base md:text-xl dark:text-gray-200 text-gray-900"
                           >
                             {item}
                           </span>
@@ -120,12 +118,12 @@ export default function Hero() {
             </div>
             <div className="text-center">
               <h1
-                className="noSelection xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-b bg-clip-text text-transparent dark:from-white dark:to-[#38495a] from-[#807a70] to-[#6d5b45]"
-                style={ubuntu.style}
+                className="noSelection lg:text-5xl text-4xl lg:leading-relaxed bg-gradient-to-b bg-clip-text text-transparent dark:from-white dark:to-[#38495a] from-[#807a70] to-[#6d5b45]"
+                style={pt_serif_caption.style}
               >
                 <span>Hi, I&apos;m {star}, a </span>
                 <br className="" />
-                <span className="font-extrabold">
+                <span className="font-extrabold py-2 md:py-4">
                   User Experience Designer.
                 </span>
               </h1>

@@ -31,15 +31,12 @@ export default function ImgSlider2({ images, fade }: props) {
         {images.map((curr, index) => {
           return (
             // item
-            <SwiperSlide
-              key={index}
-              className=" aspect-video overflow-y-scroll"
-            >
+            <SwiperSlide key={index} className="aspect-video overflow-y-scroll">
               <picture>
                 <source srcSet={curr} />
                 <img
                   alt={`${index}.jpg`}
-                  className="min-w-full min-h-full mx-auto"
+                  className="min-w-full min-h-full mx-auto bg-white"
                   style={{ pointerEvents: "none" }}
                 />
               </picture>

@@ -45,7 +45,7 @@ export default function Page({ params }: { params: { id: string } }) {
             <AnimatedHeading classList="mt-8 uppercase" title="Project" />
             <h1
               style={ubuntu.style}
-              className="font-bold lg:text-5xl text-4xl capitalize"
+              className="font-bold lg:text-3xl text-xl mt-4 capitalize"
             >
               {Data.title}
             </h1>

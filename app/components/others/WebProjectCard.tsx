@@ -8,7 +8,13 @@ import Link from "next/link";
 import AnimatedHeading from "./AnimatedHeading";
 import cardStyle from "@/app/css/WebCard2.module.css";
 import { useAppTheme } from "../theme/AppTheme";
-import { monsterRat, poppins, robotoMono, ubuntu } from "@/app/utils/Fonts";
+import {
+  monsterRat,
+  poppins,
+  roboto,
+  robotoMono,
+  ubuntu,
+} from "@/app/utils/Fonts";
 import { ProjectType } from "@/app/utils/models";
 import { clsx } from "clsx";
 
@@ -87,7 +93,6 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
               viewport={{ once: false, amount: 0.3 }}
               variants={outerVariants}
               className="px-4 pb-4 grow flex flex-col justify-between"
-              style={poppins.style}
             >
               <div>
                 <motion.div variants={innerVariants} className="">
@@ -101,12 +106,13 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
                   </p>
                   <AnimatedHeading
                     title={data.title}
-                    classList="text-xl xl:text-2xl capitalize"
+                    classList="text-lg xl:text-xl capitalize"
                   />
                 </motion.div>
                 <motion.p
                   variants={innerVariants}
-                  className="mt-2 text-sm text-slate-700 dark:text-slate-300"
+                  className="mt-2 text-sm md:text-base text-slate-700 dark:text-slate-300"
+                  style={roboto.style}
                 >
                   {data.overview}
                 </motion.p>

@@ -7,8 +7,12 @@ import {
   monsterRat,
   robotoMono,
   comicNeue,
+  poppins,
+  inter,
 } from "@/app/utils/Fonts";
 import { experience } from "@/app/utils/placeholder";
+import Image from "next/image";
+import myphoto from "@/public/assets/image/gaurav_sharma.png";
 
 interface props {
   themeColor: string;
@@ -36,86 +40,43 @@ const AboutMe = ({ themeColor }: props) => {
   return (
     <>
       <div className="myContainer p-10 z-10 dark:text-gray-200 text-gray-800">
-        <div className="flex flex-col w-full lg:text-lg my-auto">
-          <AnimatedHeading classList="tracking-wide text-lg" title="ABOUT ME" />
-          <h1 className="text-4xl lg:text-5xl mb-4" style={ubuntu.style}>
-            My <span className="font-bold ml-2">Experience</span>
-          </h1>
-          <article style={monsterRat.style}>
-            <p className="dark:text-gray-300 text-gray-700 font-medium">
-              Hi! My name is Gaurav. I am an artist 🎨, an avid film watcher 🎞️,
-              a traveler✈️, a problem-solver✔️, and a human being who cares
-              deeply about bringing more empathy into the workplace and creating
-              a lasting, meaningful impact on people&apos;s experiences through
-              good design.
-            </p>
-            <p className="dark:text-gray-300 text-gray-700 font-medium pt-2">
-              I am a user experience designer, meaning I design innovative,
-              data-driven, and impactful solutions that work! Using the right
-              mix of UX tools, I help drive smart business decisions through
-              goal alignment and problem-framing before delivering powerful,
-              value-driven design solutions that facilitate a more enjoyable
-              digital experience for all users.
-            </p>
-          </article>
-          <h2 className="mt-4 text-2xl font-bold" style={ubuntu.style}>
-            Timeline
-          </h2>
-          <motion.ul
-            initial="closed"
-            whileInView="open"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={leftOuterVariants}
-            className="dark:text-slate-400 text-slate-700"
-          >
-            {experience.map((item, index) => {
-              return (
-                <motion.li
-                  variants={leftInnerVariants}
-                  key={index}
-                  className="mt-4  flex flex-col pl-5 border-l-2 dark:border-slate-600 border-slate-700"
-                >
-                  <h1
-                    className="text-lg lg:text-xl font-semibold dark:text-gray-300 text-gray-700"
-                    style={ubuntu.style}
-                  >
-                    {item.title}
-                  </h1>
-                  <h4
-                    className={`${roboto.className} font-bold text-xs uppercase`}
-                    style={{ color: themeColor }}
-                  >
-                    {item.period}
-                  </h4>
-                  <p
-                    className="mt-2 dark:text-gray-400 text-gray-800"
-                    style={comicNeue.style}
-                  >
-                    {item.company + ", " + item.location}
-                  </p>
-                  <ul className="list-disc list-inside mt-2">
-                    {item.description.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="dark:text-gray-400 text-gray-800"
-                          style={roboto.style}
-                        >
-                          {item}
-                        </li>
-                      );
-                    })}
-                    {/* <li style={robotoMono.style} className="text-sm">
-                      <span className="font-semibold mr-1 dark:text-slate-200 text-slate-800">
-                        Grade :
-                      </span>
-                      <span className="font-semibold">{item.grade}</span>
-                    </li> */}
-                  </ul>
-                </motion.li>
-              );
-            })}
-          </motion.ul>
+        <div className="flex flex-col w-full md:text-lg my-auto">
+          <AnimatedHeading
+            classList="tracking-wide text-base md:text-lg"
+            title="ABOUT ME"
+          />
+          <div className="flex w-full flex-col-reverse md:flex-row mt-4">
+            <div className="w-full md:w-3/5 flex flex-col space-y-4">
+              <h1 className="text-xl lg:text-3xl mb-4" style={ubuntu.style}>
+                My <span className="font-bold ml-2">Experience</span>
+              </h1>
+              <article>
+                <p className="dark:text-gray-300 text-gray-700 font-medium">
+                  Hi! My name is Gaurav. I am an artist 🎨, an avid film watcher
+                  🎞️, a traveler✈️, a problem-solver✔️, and a human being who
+                  cares deeply about bringing more empathy into the workplace
+                  and creating a lasting, meaningful impact on people&apos;s
+                  experiences through good design.
+                </p>
+                <p className="dark:text-gray-300 text-gray-700 font-medium pt-2">
+                  I am a user experience designer, meaning I design innovative,
+                  data-driven, and impactful solutions that work! Using the
+                  right mix of UX tools, I help drive smart business decisions
+                  through goal alignment and problem-framing before delivering
+                  powerful, value-driven design solutions that facilitate a more
+                  enjoyable digital experience for all users.
+                </p>
+              </article>
+            </div>
+            <div className="w-full md:w-2/5 flex justify-center items-center">
+              <Image
+                src={myphoto}
+                alt="Gaurav Sharma"
+                sizes="80vw"
+                objectFit="fill"
+              />
+            </div>
+          </div>
         </div>
       </div>
       {/* background */}
@@ -125,7 +86,7 @@ const AboutMe = ({ themeColor }: props) => {
           option={BackgroundOption.pattern}
           className="opacity-20 dark:opacity-70"
         />
-        <div className="absolute w-full h-full inset-0 bg-gradient-to-b z-10 dark:from-[#000011] from-[#EFEDE3] to-transparent"></div>
+        <div className="absolute w-full h-full inset-0 bg-gradient-to-b z-10 dark:from-[#fafafa] from-[#ffffff] to-transparent"></div>
       </div>
       <div className="w-full overflow-hidden">
         <motion.div

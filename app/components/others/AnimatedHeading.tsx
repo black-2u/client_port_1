@@ -3,7 +3,7 @@
 import { Variants, motion } from "framer-motion";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { useAppTheme } from "../theme/AppTheme";
-import { comicNeue } from "@/app/utils/Fonts";
+import { comicNeue, inter, poppins } from "@/app/utils/Fonts";
 
 const outerVariants: Variants = {
   initial: {},
@@ -44,7 +44,7 @@ const AnimatedHeading = ({ title, classList, font, color }: props) => {
           variants={outerVariants}
           initial="initial"
           animate="animate"
-          style={comicNeue.style}
+          style={inter.style}
         >
           {words.map((curr: string, i: number) => {
             return (
