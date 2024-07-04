@@ -95,7 +95,7 @@ export default function HamBurger() {
                   <motion.h1
                     style={poppins.style}
                     variants={liVariants}
-                    className="text-2xl lg:text-3xl mt-4 mb-4 lg:mb-12"
+                    className="text-2xl lg:text-3xl mb-8 lg:mb-12"
                   >
                     {pathName === "/" ? (
                       <span
@@ -156,7 +156,7 @@ export default function HamBurger() {
                   })}
                   <motion.div
                     variants={liVariants}
-                    className="mt-16 flex justify-center items-center w-full"
+                    className="mt-8 md:mt-12 flex justify-center items-center w-full"
                     style={roboto.style}
                   >
                     <ModeSwitch2 />

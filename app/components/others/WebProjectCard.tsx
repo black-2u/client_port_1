@@ -45,9 +45,13 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
   }, [resolvedTheme]);
 
   return (
-    <Link href={`projects/${data.id}`} scroll={false} className="relative flex">
+    <Link
+      href={`projects/${data.id}`}
+      scroll={false}
+      className="relative w-full flex"
+    >
       <motion.section
-        className="relative group rounded-2xl flex flex-col justify-stretch"
+        className="relative w-full group rounded-2xl flex flex-col justify-stretch"
         whileTap={{ scale: 0.9 }}
         style={{ boxShadow: shadow }}
       >

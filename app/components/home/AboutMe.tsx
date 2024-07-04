@@ -40,13 +40,13 @@ const AboutMe = ({ themeColor }: props) => {
   return (
     <>
       <div className="myContainer p-10 z-10 dark:text-gray-200 text-gray-800">
-        <div className="flex flex-col w-full md:text-lg my-auto">
+        <div className="flex flex-col w-full  md:text-lg my-auto">
           <AnimatedHeading
             classList="tracking-wide text-base md:text-lg"
             title="ABOUT ME"
           />
           <div className="flex w-full flex-col-reverse md:flex-row mt-4">
-            <div className="w-full md:w-3/5 flex flex-col space-y-4">
+            <div className="w-full md:w-3/5 flex flex-col space-y-4  mt-4 md:mt-0">
               <h1 className="text-xl lg:text-3xl mb-4" style={ubuntu.style}>
                 My <span className="font-bold ml-2">Experience</span>
               </h1>
@@ -86,7 +86,7 @@ const AboutMe = ({ themeColor }: props) => {
           option={BackgroundOption.pattern}
           className="opacity-20 dark:opacity-70"
         />
-        <div className="absolute w-full h-full inset-0 bg-gradient-to-b z-10 dark:from-[#fafafa] from-[#ffffff] to-transparent"></div>
+        <div className="absolute w-full h-full inset-0 bg-gradient-to-b z-10 dark:from-[#1B2735] from-[#FBFBFB] to-transparent"></div>
       </div>
       <div className="w-full overflow-hidden">
         <motion.div
