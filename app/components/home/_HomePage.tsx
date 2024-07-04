@@ -22,7 +22,6 @@ const transition = {
 // props: HomeProps
 const _HomePage = () => {
   const { themeColor } = useAppTheme();
-  console.log("Home-themeColor", themeColor);
 
   useEffect(() => {
     window.scrollTo(0, 0);

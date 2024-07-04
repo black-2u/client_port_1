@@ -85,39 +85,71 @@ const Details = ({ Data }: { Data: ProjectType }) => {
             })}
           </div> */}
           {/* used tools */}
-          <div className=" mt-4 flex flex-col">
-            <motion.div
-              variants={languageVariants}
-              className="flex items-center"
-            >
-              <FaGripfire
-                className="animate-pulse"
-                style={{ color: themeColor }}
-              />
-              <span className="ml-2 text-lg md:text-xl" style={roboto.style}>
-                Frameworks and Tools Used
-              </span>
-            </motion.div>
-            <div className="mt-2 grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-8 w-fit mx-auto">
-              {Data["tools"].map((item, index) => {
-                return (
-                  <motion.div
-                    variants={languageVariants}
-                    key={index}
-                    className="rounded-2xl p-2 w-16 flex items-center flex-col capitalize shadow-2xl dark:bg-slate-800/80 dark:shadow-black bg-slate-100 shadow-slate-400"
-                    style={poppins.style}
-                  >
-                    <Image
-                      src={Data.icons[index]}
-                      height={40}
-                      width={40}
-                      alt="tools"
-                      //   alt={Data.toolsLogo[index]}
-                    />
-                    {/* <span className="text-base">{item}</span> */}
-                  </motion.div>
-                );
-              })}
+          <div className="flex flex-col">
+            <div className="mt-4 flex flex-col">
+              <motion.div
+                variants={languageVariants}
+                className="flex items-center"
+              >
+                <FaGripfire
+                  className="animate-pulse"
+                  style={{ color: themeColor }}
+                />
+                <span className="ml-2 text-lg md:text-xl" style={roboto.style}>
+                  Role
+                </span>
+              </motion.div>
+              <div className="mt-2 ms-6">{Data.role}</div>
+            </div>
+            <div className="mt-4 flex flex-col">
+              <motion.div
+                variants={languageVariants}
+                className="flex items-center"
+              >
+                <FaGripfire
+                  className="animate-pulse"
+                  style={{ color: themeColor }}
+                />
+                <span className="ml-2 text-lg md:text-xl" style={roboto.style}>
+                  Status
+                </span>
+              </motion.div>
+              <div className="mt-2 ms-6">{Data.status}</div>
+            </div>
+            <div className="mt-4 flex flex-col">
+              <motion.div
+                variants={languageVariants}
+                className="flex items-center"
+              >
+                <FaGripfire
+                  className="animate-pulse"
+                  style={{ color: themeColor }}
+                />
+                <span className="ml-2 text-lg md:text-xl" style={roboto.style}>
+                  Frameworks and Tools Used
+                </span>
+              </motion.div>
+              <div className="mt-2 ms-6 grid grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-4 lg:gap-8 w-fit mx-auto">
+                {Data["tools"].map((item, index) => {
+                  return (
+                    <motion.div
+                      variants={languageVariants}
+                      key={index}
+                      className="rounded-2xl p-2 w-16 flex items-center flex-col capitalize shadow-2xl dark:bg-slate-800/80 dark:shadow-black bg-slate-100 shadow-slate-400"
+                      style={poppins.style}
+                    >
+                      <Image
+                        src={Data.icons[index]}
+                        height={40}
+                        width={40}
+                        alt="tools"
+                        //   alt={Data.toolsLogo[index]}
+                      />
+                      {/* <span className="text-base">{item}</span> */}
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -138,7 +170,7 @@ const Details = ({ Data }: { Data: ProjectType }) => {
         <ImgSlider2 images={Data.images} fade={true} />
         <div className="mt-8 mx-auto">
           <Button onClick={() => router.back()}>
-            <div className="text-2xl flex items-center gap-4">
+            <div className="text-xl flex items-center gap-4">
               <AiOutlineRollback />
               <span style={poppins.style} className="font-bold">
                 Back

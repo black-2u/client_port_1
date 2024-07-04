@@ -93,6 +93,8 @@ export const projects = [
     title: "Shopsafe",
     overview:
       "Shopsafe is a mobile-based application that helps in managing crowd and take preventive measures in shopping complexes to safeguard visitors and staffs during global pandemics like COVID-19.",
+    // solution:
+    //   "Shopsafe is an crowd management application that leverages technologies like Artificial Intelligence, Internet of Things and Augmented Reality in real-time to effectively manage the crowd in retail outlets. The application&apos;s flexible framework empowers administrators of retail outlets to set rules, regulations, and guidelines to implement preventive measures for the safety and comfort of visitors and staff during overcrowding or global pandemics like COVID-19.",
     status: "Design Jam",
     role: "UX Designer",
     tools: ["Adobe XD", "Adobe Illustrator"],
@@ -159,7 +161,7 @@ export const projects = [
     overview:
       "Leading the design of digital products that make life with your pet endlessly better.",
     status: "POC",
-    role: "UX/UI Designer, Product Design, Branding",
+    role: "UX/UI Designer",
     tools: ["Adobe XD", "Adobe Illustrator"],
     icons: ["/svg/adobe-xd.svg", "/svg/illustrator.svg"],
     slug: "whisker",

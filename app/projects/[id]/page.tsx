@@ -17,17 +17,6 @@ const ubuntu = Ubuntu({
 
 export default function Page({ params }: { params: { id: string } }) {
   const path = useParams();
-  console.log("path", path.id);
-  console.log("param", params);
-
-  console.log(
-    projects.find((project) => {
-      console.log("prj", project.id);
-      console.log("path", path.id);
-
-      return project.id == path.id;
-    })
-  );
 
   const devFlag: boolean =
     process.env.NEXT_PUBLIC_DEV_FLAG == "yes" ? true : false;
