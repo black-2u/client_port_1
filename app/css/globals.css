@@ -34,31 +34,29 @@ body {
 }
 
 .myContainer {
-  min-height: 100vh;
+  max-width: 1200px !important;
   position: relative;
   display: flex;
   flex-direction: column;
   height: fit-content;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .myContainer {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
   }
 }
-@media (min-width: 1080px) {
+@media (max-width: 1080px) {
   .myContainer {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
   }
 }
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .myContainer {
     margin-left: 9rem;
     margin-right: 9rem;
@@ -69,7 +67,7 @@ body {
     margin-left: 11rem;
     margin-right: 11rem;
   }
-}
+} */
 
 .noSelection {
   -webkit-touch-callout: none;

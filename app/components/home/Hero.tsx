@@ -5,14 +5,10 @@ import ReactTypingEffect from "react-typing-effect";
 import { TbArrowsDownUp } from "react-icons/tb";
 import { useRef } from "react";
 import { useAppTheme } from "../theme/AppTheme";
-import { HeroBg } from "./HeroBg";
-import {
-  pt_serif_caption,
-  poppins,
-  roboto,
-  robotoMono,
-} from "@/app/utils/Fonts";
+
+import { pt_serif_caption, poppins } from "@/app/utils/Fonts";
 import { star } from "@/app/utils/placeholder";
+import DownloadCV from "../others/DownloadCV";
 
 const viewport = {
   once: false,
@@ -65,13 +61,10 @@ export default function Hero() {
         transition={transition}
         style={{ y: contentY }}
       >
-        <div className="flex my-auto max-w-2xl lg:max-w-4xl mx-auto p-6 flex-col z-10 rounded-md backdrop-blur-sm bg-transparent dark:md:bg-slate-300/5">
+        <div className="flex flex-col my-auto max-w-2xl lg:max-w-4xl mx-auto p-6 z-10 rounded-md backdrop-blur-sm bg-transparent dark:bg-slate-300/5">
           <motion.div variants={Top}>
-            <div className="flex">
-              <h2
-                className="text-base md:text-xl mr-1 font-mono"
-                style={{ color: themeColor }}
-              >
+            <div className="flex text-sm md:text-base">
+              <h2 className="mr-1" style={{ color: themeColor }}>
                 &lt;
               </h2>
               <ReactTypingEffect
@@ -91,7 +84,7 @@ export default function Hero() {
                 eraseSpeed={50}
                 typingDelay={150}
                 eraseDelay={1500}
-                cursorClassName="text-base md:text-xl ml-1 dark:text-gray-200 text-gray-900"
+                cursorClassName="ml-1 dark:text-gray-200 text-gray-900"
                 displayTextRenderer={(text: string, i: number) => {
                   return (
                     <h2>
@@ -99,7 +92,7 @@ export default function Hero() {
                         return (
                           <span
                             key={`greet_${i}`}
-                            className="font-mono text-base md:text-xl dark:text-gray-200 text-gray-900"
+                            className="dark:text-gray-200 text-gray-900"
                           >
                             {item}
                           </span>
@@ -109,14 +102,13 @@ export default function Hero() {
                   );
                 }}
               />
-              <h2
-                className="text-xl md:text-2xl font-ubuntu ml-1"
-                style={{ color: themeColor }}
-              >
+              <h2 className="ml-1" style={{ color: themeColor }}>
                 /&gt;
               </h2>
             </div>
-            <div className="text-center">
+
+            {/* Landing Script */}
+            <div className="text-center mt-2">
               <h1
                 className="noSelection lg:text-5xl text-4xl lg:leading-relaxed bg-gradient-to-b bg-clip-text text-transparent dark:from-white dark:to-[#38495a] from-[#807a70] to-[#6d5b45]"
                 style={pt_serif_caption.style}
@@ -131,18 +123,23 @@ export default function Hero() {
           </motion.div>
           <motion.article
             variants={Bottom}
-            className="mt-6 text-base lg:text-lg text-[#7c6a56] dark:text-[#DCD3C4]  text-center px-0 md:px-8"
+            className="mt-6 text-base text-[#7c6a56] dark:text-[#DCD3C4]  text-center px-0 md:px-8"
           >
             <p>
-              <span className="font-bold pe-2" style={robotoMono.style}>
-                Welcome to my portfolio!
-              </span>
-              <span style={roboto.style}>
-                I&apos;m a skilled User Experience Designer who loves telling
-                engaging and immersive stories through human-centered design
-                solutions.
+              <span>
+                Welcome to my portfolio! I&apos;m a skilled User Experience
+                Designer who loves telling engaging and immersive stories
+                through human-centered design solutions.
               </span>
             </p>
+          </motion.article>
+          <motion.article
+            variants={Bottom}
+            className="mt-6 text-base text-[#7c6a56] dark:text-[#DCD3C4]  text-center px-0 md:px-8"
+          >
+            <div className="flex content-center justify-center mt-6">
+              <DownloadCV />
+            </div>
           </motion.article>
         </div>
         <div className="absolute min-w-full flex justify-center items-center bottom-14 lg:bottom-10 dark:text-gray-500 text-gray-600">
@@ -166,7 +163,13 @@ export default function Hero() {
           </span>
         </div>
       </motion.div>
-      <HeroBg y={backgroundY} />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+      >
+        <div className="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+      </div>
     </section>
   );
 }

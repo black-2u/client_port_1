@@ -11,10 +11,17 @@ import {
   DM_Serif_Text,
   PT_Serif_Caption,
   Inter,
+  Urbanist,
 } from "next/font/google";
 import { NextFont } from "next/dist/compiled/@next/font";
 
 const dm_serif: NextFont = DM_Serif_Text({
+  display: "swap",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const urbanist: NextFont = Urbanist({
   display: "swap",
   weight: ["400"],
   subsets: ["latin"],
@@ -80,6 +87,7 @@ const badScript: NextFont = Bad_Script({
 
 export {
   inter,
+  urbanist,
   dm_serif,
   pt_serif_caption,
   roboto,

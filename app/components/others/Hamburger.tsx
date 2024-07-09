@@ -52,7 +52,7 @@ export default function HamBurger() {
       <>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="fixed top-0 right-4 w-fit mt-2 z-50 rounded-full cursor-pointer text-2xl p-[9px] dark:bg-blue-300 bg-slate-300"
+          className="fixed top-0 right-4 w-fit mt-2 z-50 rounded-full cursor-pointer text-2xl p-[9px] dark:bg-blue-300 bg-slate-300 visible md:hidden"
           area-label="sideNavBar"
           title="sideNavbar"
         >
@@ -76,30 +76,31 @@ export default function HamBurger() {
               resolvedTheme == "dark"
                 ? {
                     background: "linear-gradient(to right,#294861,#0e1c26)",
-                    boxShadow: "0px 0px 30px #6b7280",
+                    boxShadow: "0px 0px 24px #6b7280",
                   }
                 : {
-                    background: "linear-gradient(#D7DDE8,#BBD2C5)",
-                    boxShadow: "0px 0px 30px #374151",
+                    background: "linear-gradient(#eeffee,#ffffff)",
+                    boxShadow: "0px 0px 24px #374151",
                   }
             }
-            className="absolute top-0 right-0 bottom-0 rounded-l-2xl overflow-hidden dark:text-gray-300 text-gray-800"
+            className="absolute top-0 right-0 bottom-0 w-full md:w-[300px] md:rounded-l-2xl overflow-hidden dark:text-gray-300 text-gray-800 transition-transform duration-300 ease-out"
           >
             {navLink && (
-              <section className="w-full min-h-full px-4 flex items-center">
+              <section className="w-full min-h-full px-4 flex items-center ">
                 <motion.div
                   variants={ulVariants}
                   animate={isOpen ? "open" : "closed"}
                   className="min-w-full flex flex-col h-fit"
                 >
+                  {/* name */}
                   <motion.h1
                     style={poppins.style}
                     variants={liVariants}
-                    className="text-2xl lg:text-3xl mb-8 lg:mb-12"
+                    className="text-lg md:text-xl lg:text-2xl mb-8 lg:mb-12 text-center"
                   >
                     {pathName === "/" ? (
                       <span
-                        className="font-bold ml-2"
+                        className="font-semibold ml-2"
                         style={{ color: themeColor }}
                       >
                         Gaurav Sharma
@@ -116,12 +117,12 @@ export default function HamBurger() {
                       </>
                     )}
                   </motion.h1>
+                  {/* navItems */}
                   {navLink.map((curr, index) => {
                     return (
                       <motion.div
                         key={`navLink - ${index}`}
-                        className="text-2xl ml-4 mb-3"
-                        style={ubuntu.style}
+                        className="text-sm md:text-base ml-4 mb-3"
                         variants={liVariants}
                         whileTap={{ scale: 0.88 }}
                         whileHover={{
@@ -154,6 +155,8 @@ export default function HamBurger() {
                       </motion.div>
                     );
                   })}
+
+                  {/* theme selector */}
                   <motion.div
                     variants={liVariants}
                     className="mt-8 md:mt-12 flex justify-center items-center w-full"
@@ -182,12 +185,15 @@ export default function HamBurger() {
 }
 
 const divVariants = {
-  open: { width: "300px", height: "100vh", x: "0px" },
+  open: {
+    height: "100vh",
+    x: "0px",
+    transition: { timingFunction: "ease", duration: 0.8 },
+  },
   closed: {
-    width: "300px",
     height: "100vh",
     x: "500px",
-    transition: { delay: 0.8 },
+    transition: { delay: 0.8, duration: 0.8 },
   },
 };
 const ulVariants = {

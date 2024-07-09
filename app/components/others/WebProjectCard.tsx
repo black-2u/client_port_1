@@ -17,6 +17,7 @@ import {
 } from "@/app/utils/Fonts";
 import { ProjectType } from "@/app/utils/models";
 import { clsx } from "clsx";
+import { cn } from "@/app/utils/utils";
 
 const outerVariants: Variants = {
   open: {
@@ -62,7 +63,7 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
             width={650}
             height={400}
             alt={`${data.title}-cover pic`}
-            className="rounded-lg overflow-hidden"
+            className="rounded-lg object-fill overflow-hidden hover:shadow-lg hover:-translate-x-2 hover:-translate-y-2 hover:scale-110 duration-300 transform"
             placeholder="blur"
             blurDataURL="/assets/image/imgPlaceholder.jpg"
           />
@@ -86,7 +87,10 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
           </div>
           <div className="z-10 grow flex flex-col justify-stretch">
             <p
-              className="flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500 -right-8"
+              className={cn(
+                "flex absolute -rotate-90 top-16 font-bold uppercase text-sm text-slate-500",
+                data.role === "UX Designer" ? "-right-8" : "-right-11"
+              )}
               style={ubuntu.style}
             >
               {data.role}
@@ -96,12 +100,12 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
               whileInView="open"
               viewport={{ once: false, amount: 0.3 }}
               variants={outerVariants}
-              className="px-4 pb-4 grow flex flex-col justify-between"
+              className="px-4 py-4 grow flex flex-col justify-between"
             >
               <div>
                 <motion.div variants={innerVariants} className="">
                   <p
-                    style={robotoMono.style}
+                    // style={robotoMono.style}
                     className={`-translate-y-4 xl:translate-y-0 mb-0 xl:mb-2 px-2 py-1 rounded-full text-xs font-semibold text-center text-white w-fit ${
                       data.status == "completed" ? "bg-green-500" : "bg-red-500"
                     }`}
@@ -116,7 +120,7 @@ const WebProjectCard = ({ data }: { data: ProjectType }) => {
                 <motion.p
                   variants={innerVariants}
                   className="mt-2 text-sm md:text-base text-slate-700 dark:text-slate-300"
-                  style={roboto.style}
+                  // style={roboto.style}
                 >
                   {data.overview}
                 </motion.p>

@@ -81,26 +81,26 @@ export default function Footer() {
         whileInView="open"
         viewport={viewport}
         variants={outerVariants}
-        className="w-full pt-[4rem] pl-4 md:pl-10 lg:pl-16 xl:pl-36 2xl:pl-44 flex flex-col text-white pb-5 "
+        className="w-full flex flex-col text-white pt-16"
       >
         <div
           className={clsx(
-            "rounded-l-full py-8  pr-4 md:pr-10 lg:pr-16 xl:pr-36 2xl:pr-44",
+            "myContainer rounded-tl-full rounded-br-full mb-4 py-4",
             theme
           )}
-          style={roboto.style}
+          // style={roboto.style}
         >
           <motion.div
             variants={smooth}
-            className="w-[90%] flex md:justify-between justify-center flex-col md:flex-row-reverse gap-4"
+            className="w-[90%] flex md:justify-between justify-center flex-col gap-4"
           >
-            <div className="flex justify-center items-center space-x-4">
+            <div className="flex justify-center items-center space-x-8">
               {socialLinks.map((item, idx) => (
                 <Link
                   key={item.toolTip}
                   href={item.url}
                   title={item.toolTip}
-                  className="text-2xl"
+                  className="text-2xl hover:rounded-full hover:bg-white/10 p-4 transition-all duration-300 ease-in-out"
                   target="_blank"
                 >
                   {item.icon}
@@ -114,16 +114,14 @@ export default function Footer() {
             </div>
 
             {/* social links */}
-
             <div className="flex flex-col justify-center items-center gap-2">
-              <h2 style={ubuntu.style}>
+              <h2>
                 Copyright {new Date().getFullYear()} - All rights reserved.
               </h2>
             </div>
           </motion.div>
         </div>
       </motion.footer>
-      <ContactForm modalRef={modalRef} />
     </>
   );
 }

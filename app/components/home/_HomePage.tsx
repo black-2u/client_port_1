@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Hero from "./Hero";
 import AboutMe from "./AboutMe";
-import Tech from "./Tech";
 import Projects from "./Projects";
 import { useAppTheme } from "../theme/AppTheme";
 import { useEffect } from "react";
@@ -43,16 +42,6 @@ const _HomePage = () => {
         <AboutMe themeColor={themeColor} />
       </motion.section>
       {/* project section */}
-      <motion.section
-        id="Tech"
-        initial="closed"
-        whileInView="open"
-        viewport={viewport}
-        transition={transition}
-        className=" relative dark:bg-gradient-to-b dark:from-[#10151D]"
-      >
-        <Tech themeColor={themeColor} />
-      </motion.section>
       <motion.section
         id="WebProjects"
         initial="closed"

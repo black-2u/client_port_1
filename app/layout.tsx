@@ -5,7 +5,7 @@ import "./css/globals.css";
 import AppTheme from "./components/theme/AppTheme";
 import Navbar from "./components/others/Navbar";
 import Footer from "./components/others/Footer";
-import { inter } from "./utils/Fonts";
+import { inter, poppins, urbanist } from "./utils/Fonts";
 
 export const metadata: Metadata = {
   title: "Gaurav Sharma | Home",
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: props) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className="dark:bg-[#11161F] text-gray-800 dark:text-gray-200"
+        className="bg-[#FBFBFB] dark:bg-[#11161F] text-gray-800 dark:text-gray-200 scroll-smooth"
         style={inter.style}
       >
         <AppTheme>

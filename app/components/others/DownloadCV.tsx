@@ -21,14 +21,9 @@ const DownloadCV = () => {
           backgroundSize: "300%, 300%",
         }}
       >
-        <div className="px-10 py-2 rounded-full bg-gray-200 dark:bg-slate-800 flex items-center gap-2">
+        <div className="px-10 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center gap-2">
           <IoNewspaperOutline className="text-2xl" />
-          <span
-            style={poppins.style}
-            className="font-semibold text-slate-700 dark:text-slate-300"
-          >
-            Download Resume
-          </span>
+          <span>Download Resume</span>
         </div>
       </motion.div>
     </Link>

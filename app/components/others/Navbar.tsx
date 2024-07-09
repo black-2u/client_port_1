@@ -6,8 +6,6 @@ import { usePathname } from "next/navigation";
 import AnimatedHeading from "./AnimatedHeading";
 import { ModeSwitch1 } from "./ModeSwitch";
 import HamBurger from "./Hamburger";
-import ContactForm from "./ContactForm";
-
 import { roboto, pt_serif_caption, dm_serif } from "@/app/utils/Fonts";
 
 // MenuItems
@@ -22,7 +20,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="absolute inset-0 h-fit py-3 min-w-full pr-4 pl-4 md:pl-10 lg:pl-16 xl:pl-36 2xl:pl-44 md:pr-32 2xl:pr-44 flex flex-wrap items-center justify-between z-40">
+      <header className="absolute inset-0 h-fit text-sm lg:text-base py-3 min-w-full pr-4 pl-4 md:pl-10 lg:pl-16 xl:pl-36 2xl:pl-44 md:pr-32 2xl:pr-44 flex flex-wrap items-center justify-between z-40">
         {/* logo */}
         <Link href={"/"}>
           <AnimatedHeading
@@ -32,17 +30,17 @@ export default function Navbar() {
           />
         </Link>
         {/* navItems */}
-        <nav className="flex items-center lg:text-lg text-base gap-4 lg:gap-6 xl:gap-8  dark:text-gray-200 text-black">
+        <nav className="flex items-center gap-4 lg:gap-6 xl:gap-8  dark:text-gray-200 text-black">
           {link.map((item, index) => {
             return (
               <Link
                 scroll={false}
                 href={item.url}
                 key={index}
-                style={roboto.style}
+                // style={roboto.style}
                 className={`hidden capitalize md:inline-block noSelection ${
                   pathName === item.url
-                    ? "font-roboto underline underline-offset-8 cursor-pointer"
+                    ? "underline underline-offset-8 cursor-pointer"
                     : ""
                 }`}
               >
@@ -61,17 +59,16 @@ export default function Navbar() {
           ) : ( */}
           <Link
             href="#Contact"
-            style={roboto.style}
-            className="hidden md:inline-block font-semibold text-base lg:text-xl cursor-pointer px-2 py-1 rounded-md dark:bg-slate-800 bg-gray-200 dark:text-gray-300 text-gray-700 w-fit outline-none"
+            // style={roboto.style}
+            className="hidden md:inline-block cursor-pointer px-2 py-1 rounded-md dark:bg-slate-800 bg-gray-200 dark:text-gray-300 text-gray-700 w-fit outline-none"
           >
-            Let&apos;s talk !
+            Contact
           </Link>
           {/* )} */}
         </nav>
       </header>
       <ModeSwitch1 />
       <HamBurger />
-      <ContactForm modalRef={modalRef} />
     </>
   );
 }

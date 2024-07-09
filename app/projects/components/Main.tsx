@@ -44,7 +44,7 @@ export const MainSection = ({ data }: { data: ProjectType[] }) => {
           </motion.div>
           <div className="mt-12 p-4 md:p-8 xl:p-16 rounded-lg dark:text-gray-300 text-gray-800 dark:bg-slate-800/40 bg-slate-50">
             {data && (
-              <div className="mt-16 mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 relative">
+              <div className="mt-16 mx-auto grid md:grid-cols-2 grid-cols-1 gap-16 relative">
                 {data.map((item, index) => {
                   return <WebProjectCard key={index} data={item} />;
                 })}

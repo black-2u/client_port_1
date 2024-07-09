@@ -22,7 +22,8 @@
     "react-toastify": "^10.0.5",
     "react-toggle-dark-mode": "^1.1.1",
     "react-typing-effect": "^2.0.5",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",

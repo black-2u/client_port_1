@@ -17,10 +17,7 @@ const Heading = {
 
 export default function Projects() {
   return (
-    <div
-      className="myContainer my-4 md:my-9 xl:my-16 2xl:my-36 "
-      style={ubuntu.style}
-    >
+    <div className="myContainer mx-auto p-20 md:p-10">
       <motion.div
         initial="closed"
         whileInView="open"
@@ -39,11 +36,9 @@ export default function Projects() {
         </motion.div>
         <div className="mt-4 p-4 md:p-8 xl:p-16 rounded-lg dark:bg-slate-900 bg-gray-100">
           {projects && (
-            <div className="mx-auto grid md:grid-cols-2 grid-cols-1 gap-16 relative">
+            <div className="mx-auto grid md:grid-cols-2 grid-cols-1 gap-x-36 gap-y-24 relative">
               {projects.map((item, index) => {
-                return (
-                  <WebProjectCard key={`webProject_${index}`} data={item} />
-                );
+                return <WebProjectCard key={`project_${index}`} data={item} />;
               })}
             </div>
           )}
