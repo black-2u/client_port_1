@@ -53,7 +53,7 @@ const Overview = ({ project }: { project: ProjectType }) => {
           src={project.thumbnail}
           alt={project.title}
           width={600}
-          height={300}
+          height={500}
           className="rounded-lg hover:shadow-lg hover:-translate-x-2 hover:-translate-y-2 duration-300 transform"
         />
       </div>

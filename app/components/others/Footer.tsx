@@ -85,7 +85,7 @@ export default function Footer() {
       >
         <div
           className={clsx(
-            "myContainer rounded-tl-full rounded-br-full mb-4 py-4",
+            "max-w-[1200px] mx-auto rounded-tl-[100px] rounded-br-[100px] md:rounded-tl-full md:rounded-br-full mb-4 py-4",
             theme
           )}
           // style={roboto.style}

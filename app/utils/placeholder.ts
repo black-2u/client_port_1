@@ -356,24 +356,189 @@ export const projects: ProjectType[] = [
       images: ["/image/3-solution-1.png", "/image/3-solution-2.png"],
     },
   },
-  // {
-  //   id: "4",
-  //   title: "Whisker",
-  //   overview:
-  //     "Leading the design of digital products that make life with your pet endlessly better.",
-  //   status: "POC",
-  //   role: "UX/UI Designer",
-  //   tools: ["Adobe XD", "Adobe Illustrator"],
-  //   icons: ["/svg/adobe-xd.svg", "/svg/illustrator.svg"],
-  //   slug: "whisker",
-  //   url: "https://www.onboardit.com/",
-  //   thumbnail: "/image/8.png",
-  //   images: [
-  //     "/image/8-1.png",
-  //     "/image/8-3.png",
-  //     "/image/8-2.png",
-  //     "/image/8-4.png",
-  //     "/image/8-5.png",
-  //   ],
-  // },
+  {
+    id: "4",
+    title: "PCS Dashboard",
+    overview:
+      "User experience dashboard for the PCS team to track and analyze user data.",
+    status: "POC",
+    role: "UX Designer",
+    tools: ["Adobe XD", "Adobe Illustrator"],
+    icons: ["/svg/adobe-xd.svg", "/svg/illustrator.svg"],
+    slug: "pcs_dashboard",
+    url: "",
+    thumbnail: "/image/4-thumbnail.png",
+    // summary, research, solution
+    // summary: {content: {title:"", description: [""]}, images:[]}
+    summary: {
+      content: [
+        {
+          title: "PROBLEM",
+          description: [
+            "The PCS team lacks a unified tool to effectively track, analyze, and visualize user data, leading to inefficiencies and missed insights.",
+          ],
+        },
+        {
+          title: "Challenge",
+          description: [
+            "Creating a seamless, user-friendly interface that consolidates data from various sources into a single, intuitive dashboard.",
+          ],
+        },
+        {
+          title: "Objective",
+          description: [
+            "Enhance usability and enable efficient data-driven decision-making for the PCS team through an integrated, cohesive dashboard experience.",
+          ],
+        },
+      ],
+      image: "/image/4-summary.png",
+    },
+    // research: [ {title: "", subtitle: [""], description:[[""],[""]], images:[""]}]
+    research: [
+      {
+        title: "Week 1: Explore",
+        subtitle: [
+          "Information gathering",
+          "Explore visual trends",
+          "Exploring visual",
+        ],
+        description: [
+          // ""
+          [
+            "The goal here is to learn about where we are today with the product and where we want to go before we get into the solution space",
+          ],
+          [
+            "Taking inspiration from the outside world to craft application’s user interface.",
+          ],
+          [
+            "Creating multiple themes, page layouts and interaction models to come up with a navigation system.",
+          ],
+        ],
+        // images: ["/image/1-research-1-2.png", "/image/1-research-1-1.png"],
+        images: [
+          "/image/4-research-1-1.png",
+          "/image/4-research-1-2.png",
+          "/image/4-research-1-3.png",
+          "/image/4-research-1-4.png",
+        ],
+      },
+      {
+        title: "Week 2: Analyse",
+        subtitle: [
+          "Analysis of user feedback sessions",
+          "Information Architecture (as-is state)",
+          "Interaction model",
+        ],
+        description: [
+          // ""
+          [
+            "Looking into different types of users, identify their needs, tasks and pain areas.",
+          ],
+          [
+            "Creating the information architecture of the current system to understand the hierarchy and flow of the available information so that adequate navigation could be built.",
+          ],
+          [
+            "PCS Dashboard’s interaction model is the underlying logic for the user navigation and orientation in the application. These elements will be present on most pages of the app.",
+          ],
+        ],
+        // images: ["/image/1-research-1-2.png", "/image/1-research-1-1.png"],
+        images: [
+          "/image/4-research-2-1.png",
+          "/image/4-research-2-2.png",
+          "/image/4-research-2-3.png",
+          "/image/4-research-2-4.png",
+        ],
+      },
+      {
+        title: "Week 3: Ideate",
+        subtitle: ["Core screen templates", "Continuous feedback"],
+        description: [
+          // ""
+          [
+            "We have identified the core types of screens that makes up PCS Dashboard.",
+          ],
+          [
+            "We are in the process of gathering feedback from different actors (Managers, Lead, Engineers) on Dashboard and Project detail screens to further generate and refine our initial concepts.",
+          ],
+        ],
+        // images: ["/image/1-research-1-2.png", "/image/1-research-1-1.png"],
+        images: [
+          "/image/4-research-3-1.png",
+          "/image/4-research-3-2.png",
+          "/image/4-research-3-3.png",
+        ],
+      },
+      {
+        title: "Week 4: Ideation continued",
+        subtitle: [
+          "Making design iteration based on user feedback",
+          "Creating a Design System unique to PCS Dashboard",
+        ],
+        description: [
+          // ""
+          [""],
+          [""],
+        ],
+        // images: ["/image/1-research-1-2.png", "/image/1-research-1-1.png"],
+        images: [
+          "/image/4-research-4-1.png",
+          "/image/4-research-4-2.png",
+          "/image/4-research-4-3.png",
+        ],
+      },
+      {
+        title: "Week 5: Improve & Handover",
+        subtitle: [
+          "Dashboard page",
+          "Project detail page",
+          "Key features",
+          "Sync Data flow",
+        ],
+        description: [
+          // ""
+          [
+            "Shows all projects filtered by status",
+            "Shows cumulative statistics across all projects",
+          ],
+          [
+            "Shows quick status fo the project",
+            "Highlights the metric effecting the project status",
+            "Shows metric charts for detailed analysis",
+            "Has options to upload projections",
+          ],
+          [
+            "Rearrange metric chars order as per the need",
+            "Expanded charts for detailed analysis",
+            "Easy toggle between chart view and table view",
+            "Easy scaling on graphs for data heavy scenarios",
+            "Export metric data in PDF, and Excel format",
+          ],
+          [
+            "Current behavior: When user clicks on 'Sync Data' button, the entire screen is blocked for the user as the synchronisation happens with Codebeamer",
+            "Proposed behavior: When user clicks on 'Sync Data' button, the synchronisation with Codebeamer starts and keeps happening discreetly while user can continue to monitor data and perform any action.",
+            "Once the project is completely synced, it will show the updated status with the timestamp.",
+          ],
+        ],
+        // images: ["/image/1-research-1-2.png", "/image/1-research-1-1.png"],
+        images: [
+          "/image/4-research-5-1.png",
+          "/image/4-research-5-2.png",
+          "/image/4-research-5-3.png",
+          "/image/4-research-5-4.png",
+        ],
+      },
+    ],
+    // solution: { title: "", images: [""]}
+    solution: {
+      title: "Final Solution",
+      description: [""],
+      images: [
+        "/image/4-solution-1.jpg",
+        "/image/4-solution-2.jpg",
+        "/image/4-solution-3.jpg",
+        "/image/4-solution-4.jpg",
+        "/image/4-solution-5.jpg",
+      ],
+    },
+  },
 ];

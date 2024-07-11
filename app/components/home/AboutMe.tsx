@@ -83,7 +83,7 @@ const leftInnerVariants: Variants = {
 const AboutMe = ({ themeColor }: props) => {
   return (
     <>
-      <div className="myContainer mx-auto p-20 md:p-10  z-10 dark:text-gray-200 text-gray-800">
+      <div className="myContainer mx-auto p-0 md:p-10  z-10 dark:text-gray-200 text-gray-800">
         {/* about me */}
         <div className="flex flex-col w-full md:text-lg my-8 md:my-12">
           <AnimatedHeading

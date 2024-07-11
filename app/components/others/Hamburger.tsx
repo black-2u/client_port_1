@@ -10,7 +10,7 @@ import {
   FaUserCheck,
 } from "react-icons/fa";
 import { BsGearFill, BsCameraFill, BsCodeSlash } from "react-icons/bs";
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect, ReactNode, useCallback } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { BiMessageDetail } from "react-icons/bi";
 import { useAppTheme } from "../theme/AppTheme";
@@ -46,6 +46,11 @@ export default function HamBurger() {
       setNavLink(navLinkOthers);
     }
   }, [pathName]);
+
+  const handleClick = useCallback((name: string) => {
+    setActiveLink(name);
+    setIsOpen(false);
+  }, []);
 
   if (isClient) {
     return (
@@ -98,24 +103,12 @@ export default function HamBurger() {
                     variants={liVariants}
                     className="text-lg md:text-xl lg:text-2xl mb-8 lg:mb-12 text-center"
                   >
-                    {pathName === "/" ? (
-                      <span
-                        className="font-semibold ml-2"
-                        style={{ color: themeColor }}
-                      >
-                        Gaurav Sharma
-                      </span>
-                    ) : (
-                      <>
-                        <span>Navigation</span>
-                        <span
-                          className="font-bold ml-2"
-                          style={{ color: themeColor }}
-                        >
-                          Routes
-                        </span>
-                      </>
-                    )}
+                    <span
+                      className="font-semibold ml-2"
+                      style={{ color: themeColor }}
+                    >
+                      Gaurav Sharma
+                    </span>
                   </motion.h1>
                   {/* navItems */}
                   {navLink.map((curr, index) => {
@@ -134,7 +127,7 @@ export default function HamBurger() {
                       >
                         <Link
                           href={curr.link}
-                          onClick={() => setActiveLink(curr.name)}
+                          onClick={() => handleClick(curr.name)}
                           className={`flex items-center ${
                             resolvedTheme === "dark"
                               ? "text-gray-300"

@@ -17,7 +17,7 @@ const Heading = {
 
 export default function Projects() {
   return (
-    <div className="myContainer mx-auto p-20 md:p-10">
+    <div className="myContainer mx-auto mt-8 p-0 md:p-10">
       <motion.div
         initial="closed"
         whileInView="open"
